@@ -1,0 +1,24 @@
+name: vfk
+version: 0.1.0
+
+description: |
+  A command line tool for generating distinct drawings on foreign key pattern on SQL databases
+
+authors:
+  - Willy Svenningsson <willy@fager.st>
+
+targets:
+  vfk:
+    main: src/main.cr
+
+crystal: 1.2.2
+
+dependencies:
+  mysql:
+    github: crystal-lang/crystal-mysql
+  pg:
+    github: will/crystal-pg
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+
+license: MIT

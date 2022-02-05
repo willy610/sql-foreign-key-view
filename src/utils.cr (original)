@@ -1,0 +1,139 @@
+# rows are ``[[1,2,3,4],[5,6,7,8],[1,2,4,3]]``
+#
+# and grpon is ``[0,1]``
+#
+# result is ``Hash{[1,2]=>[[1,2,3,4],[1,2,4,3],[5,6]=>[[5,6,7,8]]}``
+def myGroupBy(rows, grpon)
+  # --------------------------------------------------------
+  theGroupBy = Hash(Array(String), Array(Array(String))).new
+  rows.map { |arow|
+    thekey = grpon.map { |i| arow[i] }
+    if theGroupBy.has_key?(thekey)
+      theGroupBy[thekey] << arow.to_a
+    else
+      theGroupBy[thekey] = [arow.to_a]
+    end
+  }
+  theGroupBy
+end
+
+def fkdef_array_2_tuple(arow)
+  # --------------------------------------------------------
+  {from_table: arow[0], fk_name: arow[1], from_column: arow[2], to_table: arow[3], to_column: arow[4]}
+end
+
+def colname_to_index(colname)
+  # --------------------------------------------------------
+  index = case colname
+          when "from_table"
+            0
+          when "fk_name"
+            1
+          when "from_column"
+            2
+          when "to_table"
+            3
+          when "to_column"
+            4
+          else STDERR.puts
+          "function 'colname_to_index' can't translate colname=#{colname}"; exit(1)
+          end
+end
+
+# --------------------------------------------------------
+
+def arrow(p1, p2, arrownumber)
+  middle = {x: (p1[:x] + p2[:x])/2, y: (p1[:y] + p2[:y])/2}
+  vrid, dx, dy = if p1[:x] < p2[:x]
+                   [0, 4, -1]
+                 elsif p1[:x] > p2[:x]
+                   [180, -10, 1]
+                 elsif p1[:y] < p2[:y]
+                   [90, 3, 8]
+                 elsif p1[:y] > p2[:y]
+                   [-90, 3, 4]
+                 else
+                   [0, 0, 0]
+                 end
+  retarrow = "<g transform='translate(#{middle[:x]} #{middle[:y]}) rotate(#{vrid})'> " +
+             " <path d='M 4 0 L 0 -3 L 2 0 L 0 3 L 4 0' fill='black' /></g>\n"
+  retnumber = "<text class='TEXTPILNUMMER' x='#{middle[:x] + dx}' y='#{middle[:y] + dy}'>#{arrownumber}</text>\n"
+  retarrow + retnumber
+end
+
+# --------------------------------------------------------
+
+def find_tlbrelat_by_name(alltblobj, thename)
+  alltblobj.select { |obj| obj.name == thename }
+end
+
+# --------------------------------------------------------
+
+def gen_connections(
+  #   colspacingdue2fk_TKN,
+  #   rowspacingdue2fk_TKN,
+  alltblobj,
+#   xposchannelcolumns, yposchannelrows, 
+  allfkconnections, layoutdims,
+  layout_COLUMNS, layout_ROWS
+)
+  # We will gen
+  # - line right out from fkdef (p1,p2)
+  # - line up/down to bottom of dest table (p2,p3)
+  # - line left/right to middel of dest table (p3,p4)
+  # - Some arrows and digts along the line (p4,p5)
+  # columnchannelsoffset = Array.new(colspacingdue2fk_TKN.size) { 1 }
+  columnchannelsoffset = Array.new(layout_COLUMNS.size) { 1 }
+  # rowchannelsoffset = Array.new(layout_COLUMNS.size) { 1 }
+  rowchannelsoffset = Array.new(layout_ROWS.size) { 1 }
+    
+  allconnections = String.new
+  allfkconnections.each { |one_conn|
+    from_table = one_conn["from_table"]
+    fromobj = find_tlbrelat_by_name(alltblobj, from_table).first
+    outerrect_from_PX = fromobj.getouterrect_PX
+    toobj = find_tlbrelat_by_name(alltblobj, one_conn["totable"]).first
+    # outerrect_to_PX = toobj.getouterrect_PX
+    yrow_PX = one_conn["fromyRow_PX"].to_f32
+    p1 = {x: outerrect_from_PX[0] + outerrect_from_PX[2] - 4.to_f32*layoutdims[:tknvidd_PX].to_f32/3.to_f32,
+          y: outerrect_from_PX[1] + yrow_PX,
+    }
+    tocolXcell = fromobj.colX
+    xoff = layoutdims[:colspacingfk_PX] * columnchannelsoffset[tocolXcell]
+    # xoff = layoutdims[:tknvidd_PX] * columnchannelsoffset[tocolXcell]
+    # columnchannelsoffset[tocolXcell] now in use in this column
+    columnchannelsoffset[tocolXcell] = columnchannelsoffset[tocolXcell] + 1
+    # xut = xposchannelcolumns[tocolXcell] + xoff
+    xut = layout_COLUMNS[tocolXcell].xposchannelcolumns_TKN + xoff
+    p2 = {x: xut, y: p1[:y]}
+
+    torowYcell = toobj.rowY
+
+    yoff = layoutdims[:rowspacingfk_PX] * rowchannelsoffset[torowYcell]
+    # yoff = layoutdims[:tknhojd_PX] * rowchannelsoffset[torowYcell]
+    # yut = yposchannelrows[torowYcell] + yoff
+    yut = layout_ROWS[torowYcell].yposchannelrow_TKN + yoff
+    rowchannelsoffset[torowYcell] = rowchannelsoffset[torowYcell] + 1
+    # rowchannelsoffset[torowYcell] now in use for this row
+    p3 = {x: p2[:x], y: yut}
+    # Just in the middle bottom of torect
+    outerrect_to_PX = toobj.getouterrect_PX
+    xut = outerrect_to_PX[0] + outerrect_to_PX[2]/2
+    p4 = {x: xut, y: p3[:y]}
+    yut = outerrect_to_PX[1] + outerrect_to_PX[3]
+    p5 = {x: p4[:x], y: yut}
+    oneconn = "<path d='M #{p1[:x]} #{p1[:y]} L #{p2[:x]} #{p2[:y]} L #{p3[:x]} #{p3[:y]} " +
+              " L #{p4[:x]} #{p4[:y]} L #{p5[:x]} #{p5[:y]}' fill='none' " +
+              " stroke='green' stroke-width_PX='0.5'/>\n"
+    x = (p1[:x] + p2[:x] + 2.to_f32*layoutdims[:tknvidd_PX].to_f32/3.to_f32).to_f32/2.to_f32
+    y = (p1[:y] + p2[:y]).to_f32/2.to_f32 - 2.to_f32
+    retnummerstart = "<text class='TEXTPILNUMMER' x='#{x}' y='#{y}'>#{toobj.tblnumber}</text>\n"
+    x = p5[:x] + 2
+    y = p5[:y] + 9
+    retnummerslut = "<text class='TEXTPILNUMMER' x='#{x}' y='#{y}'>#{toobj.tblnumber}</text>\n"
+    pil1 = arrow(p2, p3, toobj.tblnumber)
+    pil2 = arrow(p3, p4, toobj.tblnumber)
+    allconnections = allconnections + oneconn + retnummerstart + retnummerslut + pil1 + pil2
+  }
+  allconnections
+end

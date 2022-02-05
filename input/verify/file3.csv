@@ -1,0 +1,8 @@
+sp,sp_ibfk_1,pno,p,pno
+sp,sp_ibfk_2,sno,s,sno
+spj,spj_ibfk_1,jno,j,jno
+spj,spj_ibfk_2,pno,p,pno
+spj,spj_ibfk_3,sno,s,sno
+sp,1,pno_x,sp,pno
+sp,1,sno_x,sp,sno
+s,2,self,s,sno

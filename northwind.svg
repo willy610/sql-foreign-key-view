@@ -1,0 +1,212 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg'
+xmlns:xlink='http://www.w3.org/1999/xlink'
+id='canvas' width='779.0' height='455.0' preserveAspectRatio='xMidYMid' viewBox='0 0 779.0 455.0'>
+<defs><style type='text/css'>
+.TEXTDB {font-size:12px;font-weight: bold;font-family: Menlo;stroke:none;fill:black;}
+.TEXTTBLNAME {font-size:12px;font-weight: bold;font-family: Menlo;stroke:none;fill:black;text-anchor:middle}
+.TEXT {font-size:12px;font-weight: normal;font-family: Menlo;stroke:none;fill:black;}
+.PATHNUMBER {font-size:9px;font-weight: normal;font-family: Menlo;stroke:none;fill:black;}
+.BOXID {fill:#F9F5D0;stroke:black;stroke-width:1;}
+.RECTPK {stroke:blue;fill:none;stroke-width:0.5;}
+.RECTFK {stroke:red;fill:none;stroke-width:0.5;}
+.FKPATH {fill:none;stroke:green;stroke-width:0.8;}
+.FKPATHEND {fill:none;stroke:green;stroke-width:2;}
+.LINEFKPATH {stroke:blue;stroke-width:0.8;}
+.LINEFKPATHEND {stroke:blue;stroke-width:2;}
+.TITEL {font-size:130%;font-weight: normal;font-family: Lucida Console;stroke:none;fill:black;}
+</style></defs>
+<g transform='translate(20 20)'>
+<text class='TEXTDB' x='0' y='0'>Database: northwind</text>
+</g>
+<g transform='translate(20 40) scale(1.0)'>
+<g transform='translate(0 0)'>
+<rect class='BOXID' x='0' y='0' width='112.0' height='45.0' rx='0'  ry='0'></rect>
+<svg width='112.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>categories</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='101.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*CategoryID</text>
+</g>
+<g transform='translate(203 0)'>
+<rect class='BOXID' x='0' y='0' width='112.0' height='45.0' rx='0'  ry='0'></rect>
+<svg width='112.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>customers</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='101.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*CustomerID</text>
+</g>
+<g transform='translate(354 0)'>
+<rect class='BOXID' x='0' y='0' width='112.0' height='60.0' rx='0'  ry='0'></rect>
+<svg width='112.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>employees</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='101.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*EmployeeID</text>
+<rect class='RECTFK' x='10.666666' y='33.0' width='90.666664' height='15.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='45'>&#160;ReportsTo</text>
+</g>
+<g transform='translate(493 0)'>
+<rect class='BOXID' x='0' y='0' width='104.0' height='45.0' rx='0'  ry='0'></rect>
+<svg width='104.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>shippers</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='93.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*ShipperID</text>
+</g>
+<g transform='translate(612 0)'>
+<rect class='BOXID' x='0' y='0' width='112.0' height='45.0' rx='0'  ry='0'></rect>
+<svg width='112.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>suppliers</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='101.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*SupplierID</text>
+</g>
+<g transform='translate(0 150)'>
+<rect class='BOXID' x='0' y='0' width='112.0' height='90.0' rx='0'  ry='0'></rect>
+<svg width='112.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>orders</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='101.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*OrderID</text>
+<rect class='RECTFK' x='10.666666' y='33.0' width='90.666664' height='15.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='48.0' width='90.666664' height='15.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='63.0' width='90.666664' height='15.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='45'>&#160;CustomerID</text>
+<text class='TEXT' x='16' y='60'>&#160;EmployeeID</text>
+<text class='TEXT' x='16' y='75'>&#160;selfref</text>
+</g>
+<g transform='translate(203 150)'>
+<rect class='BOXID' x='0' y='0' width='112.0' height='75.0' rx='0'  ry='0'></rect>
+<svg width='112.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>products</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='101.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*ProductID</text>
+<rect class='RECTFK' x='10.666666' y='33.0' width='90.666664' height='15.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='48.0' width='90.666664' height='15.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='45'>&#160;CategoryID</text>
+<text class='TEXT' x='16' y='60'>&#160;SupplierID</text>
+</g>
+<g transform='translate(612 300)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+<g transform='translate(0 0)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+<g transform='translate(0 0)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+<g transform='translate(0 300)'>
+<rect class='BOXID' x='0' y='0' width='128.0' height='60.0' rx='0'  ry='0'></rect>
+<svg width='128.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>orderdetails</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='117.333336' height='32.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='18.0' width='106.666664' height='15.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='33.0' width='106.666664' height='15.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*OrderID</text>
+<text class='TEXT' x='16' y='45'>*ProductID</text>
+</g>
+<g transform='translate(0 0)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+<g transform='translate(0 0)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+<g transform='translate(0 0)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+<g transform='translate(0 0)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+
+<path class='FKPATH' d='M 455.33334 40.5 L 478 40.5 L 478 75 
+  L 410.0 75 L 410.0 60.0' />
+<text class='PATHNUMBER' x='472.00003' y='38.5'>3</text>
+<text class='PATHNUMBER' x='412.0' y='71.0'>3</text>
+<g transform='translate(478.0 57.75) rotate(90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='483.0' y='67.75'>3</text>
+<g transform='translate(444.0 75.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='434.0' y='71.0'>3</text>
+<path class='FKPATH' d='M 101.333336 190.5 L 140 190.5 L 140 90 
+  L 259.0 90 L 259.0 45.0' />
+<text class='PATHNUMBER' x='126.00001' y='188.5'>2</text>
+<text class='PATHNUMBER' x='261.0' y='56.0'>2</text>
+<g transform='translate(140.0 140.25) rotate(-90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='145.0' y='140.25'>2</text>
+<g transform='translate(199.5 90.0) rotate(0) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='204.5' y='86.0'>2</text>
+<path class='FKPATH' d='M 101.333336 205.5 L 152 205.5 L 152 105 
+  L 410.0 105 L 410.0 60.0' />
+<text class='PATHNUMBER' x='132.0' y='203.5'>3</text>
+<text class='PATHNUMBER' x='412.0' y='71.0'>3</text>
+<g transform='translate(152.0 155.25) rotate(-90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='157.0' y='155.25'>3</text>
+<g transform='translate(281.0 105.0) rotate(0) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='286.0' y='101.0'>3</text>
+<path class='FKPATH' d='M 101.333336 220.5 L 164 220.5 L 164 255 
+  L 56.0 255 L 56.0 240.0' />
+<text class='PATHNUMBER' x='138.0' y='218.5'>6</text>
+<text class='PATHNUMBER' x='58.0' y='251.0'>6</text>
+<g transform='translate(164.0 237.75) rotate(90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='169.0' y='247.75'>6</text>
+<g transform='translate(110.0 255.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='100.0' y='251.0'>6</text>
+<path class='FKPATH' d='M 304.33334 190.5 L 327 190.5 L 327 120 
+  L 56.0 120 L 56.0 45.0' />
+<text class='PATHNUMBER' x='321.00003' y='188.5'>1</text>
+<text class='PATHNUMBER' x='58.0' y='56.0'>1</text>
+<g transform='translate(327.0 155.25) rotate(-90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='332.0' y='155.25'>1</text>
+<g transform='translate(191.5 120.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='181.5' y='116.0'>1</text>
+<path class='FKPATH' d='M 304.33334 205.5 L 339 205.5 L 339 135 
+  L 668.0 135 L 668.0 45.0' />
+<text class='PATHNUMBER' x='327.00003' y='203.5'>5</text>
+<text class='PATHNUMBER' x='670.0' y='56.0'>5</text>
+<g transform='translate(339.0 170.25) rotate(-90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='344.0' y='170.25'>5</text>
+<g transform='translate(503.5 135.0) rotate(0) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='508.5' y='131.0'>5</text>
+<path class='FKPATH' d='M 117.333336 325.5 L 176 325.5 L 176 270 
+  L 56.0 270 L 56.0 240.0' />
+<text class='PATHNUMBER' x='152.0' y='323.5'>6</text>
+<text class='PATHNUMBER' x='58.0' y='251.0'>6</text>
+<g transform='translate(176.0 297.75) rotate(-90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='181.0' y='297.75'>6</text>
+<g transform='translate(116.0 270.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='106.0' y='266.0'>6</text>
+<path class='FKPATH' d='M 117.333336 340.5 L 188 340.5 L 188 285 
+  L 259.0 285 L 259.0 225.0' />
+<text class='PATHNUMBER' x='158.0' y='338.5'>7</text>
+<text class='PATHNUMBER' x='261.0' y='236.0'>7</text>
+<g transform='translate(188.0 312.75) rotate(-90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='193.0' y='312.75'>7</text>
+<g transform='translate(223.5 285.0) rotate(0) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='228.5' y='281.0'>7</text>
+
+</g>
+</svg>

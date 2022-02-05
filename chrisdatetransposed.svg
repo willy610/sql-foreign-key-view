@@ -1,0 +1,132 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg'
+xmlns:xlink='http://www.w3.org/1999/xlink'
+id='canvas' width='281.0' height='470.0' preserveAspectRatio='xMidYMid' viewBox='0 0 281.0 470.0'>
+<defs><style type='text/css'>
+.TEXTDB {font-size:12px;font-weight: bold;font-family: Menlo;stroke:none;fill:black;}
+.TEXTTBLNAME {font-size:12px;font-weight: bold;font-family: Menlo;stroke:none;fill:black;text-anchor:middle}
+.TEXT {font-size:12px;font-weight: normal;font-family: Menlo;stroke:none;fill:black;}
+.PATHNUMBER {font-size:9px;font-weight: normal;font-family: Menlo;stroke:none;fill:black;}
+.BOXID {fill:#F9F5D0;stroke:black;stroke-width:1;}
+.RECTPK {stroke:blue;fill:none;stroke-width:0.5;}
+.RECTFK {stroke:red;fill:none;stroke-width:0.5;}
+.FKPATH {fill:none;stroke:green;stroke-width:0.8;}
+.FKPATHEND {fill:none;stroke:green;stroke-width:2;}
+.LINEFKPATH {stroke:blue;stroke-width:0.8;}
+.LINEFKPATHEND {stroke:blue;stroke-width:2;}
+.TITEL {font-size:130%;font-weight: normal;font-family: Lucida Console;stroke:none;fill:black;}
+</style></defs>
+<g transform='translate(20 20)'>
+<text class='TEXTDB' x='0' y='0'>Database: chrisdate</text>
+</g>
+<g transform='translate(20 40) scale(1.0)'>
+<g transform='translate(15 0)'>
+<rect class='BOXID' x='0' y='0' width='72.0' height='75.0' rx='0'  ry='0'></rect>
+<svg width='72.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>J</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='61.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*JNO</text>
+<text class='TEXT' x='16' y='45'>CITY</text>
+<text class='TEXT' x='16' y='60'>JNAME</text>
+</g>
+<g transform='translate(170 0)'>
+<rect class='BOXID' x='0' y='0' width='56.0' height='75.0' rx='0'  ry='0'></rect>
+<svg width='56.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>SP</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='45.333336' height='32.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='18.0' width='34.666668' height='15.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='33.0' width='34.666668' height='15.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*PNO</text>
+<text class='TEXT' x='16' y='45'>*SNO</text>
+<text class='TEXT' x='16' y='60'>QTY</text>
+</g>
+<g transform='translate(15 105)'>
+<rect class='BOXID' x='0' y='0' width='80.0' height='105.0' rx='0'  ry='0'></rect>
+<svg width='80.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>P</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='69.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*PNO</text>
+<text class='TEXT' x='16' y='45'>CITY</text>
+<text class='TEXT' x='16' y='60'>COLOR</text>
+<text class='TEXT' x='16' y='75'>PNAME</text>
+<text class='TEXT' x='16' y='90'>WEIGHT</text>
+</g>
+<g transform='translate(170 105)'>
+<rect class='BOXID' x='0' y='0' width='56.0' height='90.0' rx='0'  ry='0'></rect>
+<svg width='56.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>SPJ</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='45.333336' height='47.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='18.0' width='34.666668' height='15.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='33.0' width='34.666668' height='15.0' rx='0'  ry='0'></rect>
+<rect class='RECTFK' x='10.666666' y='48.0' width='34.666668' height='15.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*JNO</text>
+<text class='TEXT' x='16' y='45'>*PNO</text>
+<text class='TEXT' x='16' y='60'>*SNO</text>
+<text class='TEXT' x='16' y='75'>QTY</text>
+</g>
+<g transform='translate(15 255)'>
+<rect class='BOXID' x='0' y='0' width='80.0' height='90.0' rx='0'  ry='0'></rect>
+<svg width='80.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'>S</text>
+</svg>
+<rect class='RECTPK' x='5.333333' y='17.0' width='69.333336' height='17.0' rx='0'  ry='0'></rect>
+<text class='TEXT' x='16' y='30'>*SNO</text>
+<text class='TEXT' x='16' y='45'>CITY</text>
+<text class='TEXT' x='16' y='60'>SNAME</text>
+<text class='TEXT' x='16' y='75'>STATUS</text>
+</g>
+<g transform='translate(170 255)'>
+<rect class='BOXID' x='0' y='0' width='0.0' height='0.0' rx='0'  ry='0'></rect>
+<svg width='0.0' height='30'>
+<text class='TEXTTBLNAME' x='50%' y='13'></text>
+</svg>
+</g>
+
+<path class='FKPATH' d='M 180.66666666666666 25.5 L 110 25.5 L 110 225 
+  L 55.0 225 L 55.0 210.0' />
+<text class='PATHNUMBER' x='112.66666666666667' y='23.5'>3</text>
+<text class='PATHNUMBER' x='57.0' y='221.0'>3</text>
+<g transform='translate(110.0 125.25) rotate(90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='115.0' y='135.25'>3</text>
+<g transform='translate(82.5 225.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='72.5' y='221.0'>3</text>
+<path class='FKPATH' d='M 180.66666666666666 40.5 L 122 40.5 L 122 360 
+  L 55.0 360 L 55.0 345.0' />
+<text class='PATHNUMBER' x='124.66666666666667' y='38.5'>5</text>
+<text class='PATHNUMBER' x='57.0' y='356.0'>5</text>
+<g transform='translate(122.0 200.25) rotate(90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='127.0' y='210.25'>5</text>
+<g transform='translate(88.5 360.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='78.5' y='356.0'>5</text>
+<path class='FKPATH' d='M 180.66666666666666 130.5 L 134 130.5 L 134 90 
+  L 51.0 90 L 51.0 75.0' />
+<text class='PATHNUMBER' x='136.66666666666666' y='128.5'>1</text>
+<text class='PATHNUMBER' x='53.0' y='86.0'>1</text>
+<g transform='translate(134.0 110.25) rotate(-90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='139.0' y='110.25'>1</text>
+<g transform='translate(92.5 90.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='82.5' y='86.0'>1</text>
+<path class='FKPATH' d='M 180.66666666666666 145.5 L 146 145.5 L 146 240 
+  L 55.0 240 L 55.0 210.0' />
+<text class='PATHNUMBER' x='148.66666666666666' y='143.5'>3</text>
+<text class='PATHNUMBER' x='57.0' y='221.0'>3</text>
+<g transform='translate(146.0 192.75) rotate(90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='151.0' y='202.75'>3</text>
+<g transform='translate(100.5 240.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='90.5' y='236.0'>3</text>
+<path class='FKPATH' d='M 180.66666666666666 160.5 L 158 160.5 L 158 375 
+  L 55.0 375 L 55.0 345.0' />
+<text class='PATHNUMBER' x='160.66666666666666' y='158.5'>5</text>
+<text class='PATHNUMBER' x='57.0' y='356.0'>5</text>
+<g transform='translate(158.0 267.75) rotate(90) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='163.0' y='277.75'>5</text>
+<g transform='translate(106.5 375.0) rotate(180) scale(2)'>  <path d='M 5 0 L 0 -2 L 2 0 L 0 2 L 5 0' fill='black' /></g>
+<text class='PATHNUMBER' x='96.5' y='371.0'>5</text>
+
+</g>
+</svg>
