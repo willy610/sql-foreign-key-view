@@ -216,7 +216,7 @@ def get_cover_svg(width_PX, height_PX, databasename, tables_as_as_svg, connectio
 
   "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"
 \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">
-<svg version='1.1' xmlns='http://www.w3.org/2000/svg'
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' style='background-color:white'
 xmlns:xlink='http://www.w3.org/1999/xlink'
 id='canvas' width='#{width_Pix}' height='#{height_Pix}' preserveAspectRatio='xMidYMid' viewBox='0 0 #{width_Pix} #{height_Pix}'>
 <defs><style type='text/css'>
